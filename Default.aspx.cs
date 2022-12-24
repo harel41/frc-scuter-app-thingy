@@ -11,7 +11,7 @@ public partial class _Default : System.Web.UI.Page
     {
 
     }
-    protected void AddNewRiddle_Click(object sender, EventArgs e)
+    protected void AddNewDefault_Click(object sender, EventArgs e)
 	{
 		
 	

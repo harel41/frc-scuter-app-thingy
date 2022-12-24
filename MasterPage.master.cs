@@ -9,19 +9,5 @@ public partial class MasterPage : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if(Session["Team"] != null)
-        {
-            linkLogin.Visible = false;
-            linkLogout.Visible = true;
-            lblHello.Text = "אתה עושה ל-" + Session["Team"];
-        }
-
-    }
-
-    protected void linkLogout_Click(object sender, EventArgs e)
-    {
-        Session.Clear();
-        Response.Redirect("login.aspx");
-
     }
 }
