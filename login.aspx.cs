@@ -16,12 +16,12 @@ public partial class login : System.Web.UI.Page
     {
         using (MyDB db = new MyDB())
         {
-            string sql = "SELECT [user_id], [team_num], [game_num] FROM [Table] WHERE [name]={0}";
+            string sql = "SELECT  [team_num], [game_num] FROM [Table] WHERE [name]={0}";
             var command = db.Command(sql, TxtScouterName.Text);
             var row = command.GetFirstRow();
             if (row != null && (string)row["game_num"] == NumGame.Text)
             {
-                Session["user_id"] = row["user_id"];
+               
                 Session["name"] = TxtScouterName.Text;
                 Session["team_num"] = row["team_num"];
                 Session["game_num"] = row["game_num"];
