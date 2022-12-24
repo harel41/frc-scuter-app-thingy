@@ -5,7 +5,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="mainContent" Runat="Server">
     <p>ברוכים הבאים לאתר סקווטינג </p>
-    <h2>הכנס נתונים</h2>
+
+    <h2>לפני המקצה</h2>
 	<asp:Label runat="server" Text="שם סקאוטר:" ></asp:Label>
 	<asp:TextBox ID="Txtname" runat="server" ></asp:TextBox>
 	<br />
@@ -21,17 +22,40 @@
 	<h2>אוטונומי</h2>
 	<asp:Label runat="server" Text=" הרובוט יצא מהקו" ></asp:Label>
     <asp:CheckBox ID = "robotLeaveLine"  runat="server" />
-    <br />
-    <asp:Button runat="server" Text="+" OnClick ="PlusLow_Click" />
-    <asp:Label runat="server" Text=" מספר לנמוך" ></asp:Label>
-    <asp:Button runat="server" Text="-" OnClick ="MinusLow_Click" />
-    <br />
-    <asp:Button runat="server" Text="+" OnClick ="PlusHigh_Click"/>
-    <asp:Label runat="server" Text=" מספר לגבוה" ></asp:Label>
-    <asp:Button runat="server" Text="-" OnClick ="MinusHigh_Click" />
-	<asp:Label ID ="Num" runat="server" Text=" קליקים" ></asp:Label>
-     <br />
+   <br />
+	<asp:Label ID ="Label1" runat="server" Text=" מספר כדורים לנמוך:" ></asp:Label>
+	<asp:TextBox ID="AtonLowNum" runat="server" type="number" min ="0" />
+	<br />
+	<asp:Label ID ="Label2" runat="server" Text=" מספר כדורים לגבוה:" ></asp:Label>
+	<asp:TextBox ID="AtonHighNum" runat="server" type="number" min ="0" />
 
+	<h2>טלאופ</h2>
+	<asp:Label ID ="Label3" runat="server" Text=" מספר כדורים לנמוך:" ></asp:Label>
+	<asp:TextBox ID="TeleopLowNum" runat="server" type="number" min ="0" />
+	<br />
+	<asp:Label ID ="Label4" runat="server" Text=" מספר כדורים לגבוה:" ></asp:Label>
+	<asp:TextBox ID="TeleopHighNum" runat="server" type="number" min ="0" />
+	<br />
+	<asp:Label ID ="Label5" runat="server" Text=" מספר כדורים שהוחמצו:" ></asp:Label>
+	<asp:TextBox ID="TeleopMissed" runat="server" type="number" min ="0" />
+	<br />
+	<asp:Label ID ="Label6" runat="server" Text=" לאיזה מוט הרובוט טיפס (אם הוא לא טיפס נא להשאיר ריק)?:" ></asp:Label>
+	<br />
+	<asp:Label ID ="Label7" runat="server" Text="מוט 1" ></asp:Label>
+	<asp:CheckBox ID="climb1" runat="server" />
+	<br />
+	<asp:Label ID ="Label8" runat="server" Text="מוט 2" ></asp:Label>
+	<asp:CheckBox ID="climb2" runat="server" />
+	<br />
+	<asp:Label ID ="Label9" runat="server" Text="מוט 3" ></asp:Label>
+	<asp:CheckBox ID="climb3" runat="server" />
+	<br />
+	<asp:Label ID ="Label10" runat="server" Text="מוט 4" ></asp:Label>
+	<asp:CheckBox ID="climb4" runat="server" />
+	<br />
+	<asp:Label runat="server" Text=" הרובוט נשבר?" ></asp:Label>
+    <asp:CheckBox ID = "broken"  runat="server" />
+	<br />
 	<asp:Button runat="server" Text="תשלח!" OnClick="AddNewDefault_Click" />
 	<asp:Button runat="server" Text="תנקה הכל" OnClick="GoBack_Click" />
 </asp:Content>
