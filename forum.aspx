@@ -6,9 +6,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="mainContent" Runat="Server">
 	
     <h2>לפני המקצה</h2>
-	<asp:Label runat="server" Text="שם סקאוטר:" ></asp:Label>
-	<asp:TextBox ID="Txtname" runat="server" ></asp:TextBox>
-	<br />
+	
 	<asp:Label runat="server" Text="מספר קבוצה:" ></asp:Label>
 	<asp:TextBox ID="TxtTeamNum" runat="server" onkeyup ="isTeamNumGood()" ></asp:TextBox>
 	<br />

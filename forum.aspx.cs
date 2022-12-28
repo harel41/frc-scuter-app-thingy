@@ -60,11 +60,11 @@ public partial class _Default : System.Web.UI.Page
 
 
 
-        string sql = "INSERT INTO [table] ([name], [team_num], [game_num], [AtonLeaveLine], [AtonLow], [AtonHigh], [TeleopLow], [TeleopHigh], [climb], [TeleopBrake])" +
-				" VALUES ({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9})";
+        string sql = "INSERT INTO [Table] ([name], [team_num], [game_num], [AtonLeaveLine], [AtonLow], [AtonHigh], [TeleopLow], [TeleopHigh], [missed], [climb], [TeleopBrake])" +
+				" VALUES ({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10})";
 			using (MyDB db = new MyDB())
 			{
-				var cmd = db.Command(sql, Txtname.Text, TxtTeamNum.Text, TxtGameNum.Text, leave, AtonLowNum.Text, AtonHighNum.Text, TeleopLowNum.Text, TeleopHighNum.Text, climb, brake);
+				var cmd = db.Command(sql, Session["name"], TxtTeamNum.Text, TxtGameNum.Text, leave, AtonLowNum.Text, AtonHighNum.Text, TeleopLowNum.Text, TeleopHighNum.Text, TeleopMissed.Text, climb, brake);
 				cmd.ExecuteNonQuery();
                 
         }

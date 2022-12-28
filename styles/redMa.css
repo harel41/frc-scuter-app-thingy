@@ -21,7 +21,7 @@ input[type = checkbox]{
 }
 
 input[type="submit"] {
-    background-color: white
+    background-color: white;
     border: none;
     color: black;
     padding: 15px 32px;
@@ -29,4 +29,11 @@ input[type="submit"] {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+}
+
+input[type="password"] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
 }

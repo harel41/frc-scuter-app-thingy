@@ -34,13 +34,13 @@ public partial class Admin : System.Web.UI.Page
 	protected void Button1_Click(object sender, EventArgs e)
 	{
 
-		string sql1 = "SELECT [name], [team_num], [game_num], [AtonLeaveLine], [AtonLow], [AtonHigh], [TeleopLow], [TeleopHigh], [climb], [TeleopBrake] FROM [table]  WHERE [id] = {0}";
-		for (int i = 0; i < int.Parse(TxtNum.Text); i++)
+		string sql1 = "SELECT [name], [team_num], [game_num], [AtonLeaveLine], [AtonLow], [AtonHigh], [TeleopLow], [TeleopHigh], [missed], [climb], [TeleopBrake] FROM [table]  WHERE [id] = {0}";
+		for (int i = 0; i <= int.Parse(TxtNum.Text); i++)
 		{
 			using (MyDB db = new MyDB())
 			{
 
-				var cmd_replies = db.Command(sql1, 2);
+				var cmd_replies = db.Command(sql1, i);
 				GridView1.DataSource = cmd_replies.GetTable();
 				GridView1.DataBind();
 			}
