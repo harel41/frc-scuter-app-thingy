@@ -10,6 +10,7 @@
     <asp:Label ID ="Label2" runat="server" Text="בבקשה תכניס את שמך:" ></asp:Label>
     <br />
     <asp:TextBox ID="TxtName" runat="server" onkeyup ="isNameGood()"></asp:TextBox>
+     <br />
 
     <asp:Button ID="Button1" runat="server" Text="להיכנס!" OnClick ="Login_Click" />
 

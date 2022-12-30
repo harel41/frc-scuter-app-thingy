@@ -54,7 +54,7 @@
     <asp:CheckBox ID = "broken"  runat="server" />
 	<br />
 	<asp:Button runat="server" Text="תשלח!" OnClick="AddNewDefault_Click" />
-	<asp:Button runat="server" Text="תנקה הכל" OnClick="GoBack_Click" />
+	<asp:Button runat="server" Text="לחזור לדף הראשי" OnClick="GoBack_Click" />
 	<asp:Table ID="Table1" runat="server"></asp:Table>
 </asp:Content>
 
