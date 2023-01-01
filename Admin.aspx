@@ -19,5 +19,34 @@
      <br />
     
     <asp:GridView ID="GridView1" runat="server"></asp:GridView>
-</asp:Content>
+    
 
+    <h2>לעדכן את הטבלה</h2>
+    <asp:Label ID ="Label1" runat="server" Text="שנה לפי:" ></asp:Label>
+     <asp:DropDownList ID="DropDownList1" runat="server">
+        <asp:listitem text="שם" value="[name]"></asp:listitem>
+         <asp:listitem text="id" value="[id]"></asp:listitem>
+         <asp:listitem text="קבוצה" value="[team_num]"></asp:listitem>
+        <asp:listitem text="מקצה" value="[game_num]"></asp:listitem>
+    </asp:DropDownList>
+      <br />
+    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+     <br />
+    <asp:Label ID ="Label2" runat="server" Text="את הערך:" ></asp:Label>
+   <asp:DropDownList ID="DropDownList2" runat="server">
+        <asp:listitem text="שם" value="[name]"></asp:listitem>
+         <asp:listitem text="id" value="[id]"></asp:listitem>
+         <asp:listitem text="קבוצה" value="[team_num]"></asp:listitem>
+        <asp:listitem text="מקצה" value="[game_num]"></asp:listitem>
+    </asp:DropDownList>
+     <br />
+     <br />
+
+    <asp:Label ID ="Label3" runat="server" Text="לערך:" ></asp:Label>
+     <br />
+
+    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+    <br />
+     <asp:Button ID="Button6" runat="server" Text="לשנות!" OnClick ="Button6_Click" />
+
+</asp:Content>

@@ -8,9 +8,11 @@
     <h2>לפני המקצה</h2>
 	
 	<asp:Label runat="server" Text="מספר קבוצה:" ></asp:Label>
+	<br />
 	<asp:TextBox ID="TxtTeamNum" runat="server" onkeyup ="isTeamNumGood()" ></asp:TextBox>
 	<br />
 	<asp:Label runat="server" Text="מספר מקצה:" ></asp:Label>
+	<br />
 	<asp:TextBox ID="TxtGameNum" runat="server" onkeyup ="isGameNumGood()" ></asp:TextBox>
 	<br />
 	<asp:Label ID="lblMessage" runat="server" ></asp:Label>
@@ -19,21 +21,27 @@
 	<h2>אוטונומי</h2>
 	<asp:Label runat="server" Text=" הרובוט יצא מהקו" ></asp:Label>
     <asp:CheckBox ID = "robotLeaveLine"  runat="server" />
-   <br />
+    <br />
+	<br />
 	<asp:Label ID ="Label1" runat="server" Text=" מספר כדורים לנמוך:" ></asp:Label>
+	<br />
 	<asp:TextBox ID="AtonLowNum" runat="server" type="number" min ="0" />
 	<br />
 	<asp:Label ID ="Label2" runat="server" Text=" מספר כדורים לגבוה:" ></asp:Label>
+	<br />
 	<asp:TextBox ID="AtonHighNum" runat="server" type="number" min ="0" />
 
 	<h2>טלאופ</h2>
 	<asp:Label ID ="Label3" runat="server" Text=" מספר כדורים לנמוך:" ></asp:Label>
+	<br />
 	<asp:TextBox ID="TeleopLowNum" runat="server" type="number" min ="0" />
 	<br />
 	<asp:Label ID ="Label4" runat="server" Text=" מספר כדורים לגבוה:" ></asp:Label>
+	<br />
 	<asp:TextBox ID="TeleopHighNum" runat="server" type="number" min ="0" />
 	<br />
 	<asp:Label ID ="Label5" runat="server" Text=" מספר כדורים שהוחמצו:" ></asp:Label>
+	<br />
 	<asp:TextBox ID="TeleopMissed" runat="server" type="number" min ="0" />
 	<br />
 	<asp:Label ID ="Label6" runat="server" Text=" לאיזה מוט הרובוט טיפס (אם הוא לא טיפס נא להשאיר ריק)?:" ></asp:Label>
