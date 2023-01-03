@@ -22,22 +22,25 @@
     
 
     <h2>לעדכן את הטבלה</h2>
-    <asp:Label ID ="Label1" runat="server" Text="שנה לפי:" ></asp:Label>
-     <asp:DropDownList ID="DropDownList1" runat="server">
-        <asp:listitem text="שם" value="[name]"></asp:listitem>
-         <asp:listitem text="id" value="[id]"></asp:listitem>
-         <asp:listitem text="קבוצה" value="[team_num]"></asp:listitem>
-        <asp:listitem text="מקצה" value="[game_num]"></asp:listitem>
-    </asp:DropDownList>
-      <br />
-    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+    <asp:Label ID ="Label1" runat="server" Text="באיזה ID אתה רוצה לשנות?" ></asp:Label>
+    <br />
+    <asp:TextBox ID="TextBox1" runat="server" type="number"></asp:TextBox>
      <br />
     <asp:Label ID ="Label2" runat="server" Text="את הערך:" ></asp:Label>
    <asp:DropDownList ID="DropDownList2" runat="server">
-        <asp:listitem text="שם" value="[name]"></asp:listitem>
-         <asp:listitem text="id" value="[id]"></asp:listitem>
-         <asp:listitem text="קבוצה" value="[team_num]"></asp:listitem>
-        <asp:listitem text="מקצה" value="[game_num]"></asp:listitem>
+      
+        <asp:listitem text="שם" value="name"></asp:listitem>
+         <asp:listitem text="קבוצה" value="team_num"></asp:listitem>
+        <asp:listitem text="מקצה" value="game_num"></asp:listitem>
+       <asp:listitem text="עזב את הקו" value="AtonLeaveLine"></asp:listitem>
+       <asp:listitem text="כדורים לנמוך באוטונומי" value="AtonLow"></asp:listitem>
+       <asp:listitem text="כדורים לגבוה באוטונומי" value="AtonHigh"></asp:listitem>
+       <asp:listitem text="כדורים לנמוך בטלאופ" value="TeleopLow"></asp:listitem>
+       <asp:listitem text="כדורים לגבוה בטלאופ" value="TeleopHigh"></asp:listitem>
+       <asp:listitem text="כדורים שפספס" value="missed"></asp:listitem>
+       <asp:listitem text="טיפוס" value="climb"></asp:listitem>
+       <asp:listitem text="האם נשבר" value="TeleopBrake"></asp:listitem>
+
     </asp:DropDownList>
      <br />
      <br />
@@ -48,5 +51,13 @@
     <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
     <br />
      <asp:Button ID="Button6" runat="server" Text="לשנות!" OnClick ="Button6_Click" />
+
+     <br />
+    <h2>למחוק שורה</h2>
+     <asp:Label ID ="Label4" runat="server" Text="מה הID של השורה שאתה רוצה למחוק?" ></asp:Label>
+    <br />
+    <asp:TextBox ID="TextBox3" runat="server" type="number" ></asp:TextBox>
+    <br />
+    <asp:Button ID="Button7" runat="server" Text="מחק!" OnClick ="Button7_Click" />
 
 </asp:Content>
